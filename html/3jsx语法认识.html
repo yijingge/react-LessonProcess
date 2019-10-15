@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>
+<script>
+    function formatName(user){
+        return user.firstName + ' ' + user.lastName
+    }
+    const user = {
+        firstName:'Harper',
+        lastName:'Perez'
+    }
+
+    const element = React.createElement('h1',{},'hello,' + formatName(user));``
+    // 第一个参数是标签，第二个参数是对应的js代码，第三个参数是标签的内容
+    ReactDOM.render(element,document.getElementById('container'))
+
+</script>

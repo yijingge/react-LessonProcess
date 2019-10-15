@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>
+<script type="text/jsx">
+    // 用函数的形式定义一个react组件
+    function Welcome(props) {
+        return <h1>hello, {props.name}</h1>
+    }
+    // 定义一个react 元素，在元素中调用welcome组件
+    const element = <Welcome name="Sara"/>
+    // 通过render函数将元素输出到dom容器里面去
+    ReactDOM.render(element, document.getElementById('container'))
+</script>
